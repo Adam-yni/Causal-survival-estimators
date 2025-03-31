@@ -27,3 +27,6 @@ To determine which estimator is most suitable for your use case, refer to the ta
 | Treatment dependent on covariates                | ❌                           | ❌                                       | ✅                                       | ✅                                                       |
 | Treatment and Censoring dependent on covariates  | ❌                           | ❌                                        | ❌                                       | ✅                                                       |
 
+
+![Example](KM_causal_survival.png)
+
