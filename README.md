@@ -25,5 +25,5 @@ To determine which estimator is most suitable for your use case, refer to the ta
 | RCT (Censoring & Treatment independent of covariates) | ✅                           | ✅                                       | ✅                                       | ✅                                                       |
 | Censoring dependent on covariates                | ❌                           | ✅                                       | ❌                                       | ✅                                                       |
 | Treatment dependent on covariates                | ❌                           | ❌                                       | ✅                                       | ✅                                                       |
-| Treatment and Censoring dependent on covariates  | ❌                           | ✅                                       | ❌                                       | ✅                                                       |
+| Treatment and Censoring dependent on covariates  | ❌                           | ❌                                        | ❌                                       | ✅                                                       |
 
