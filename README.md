@@ -49,8 +49,6 @@ The `calculate_causal_effect` function computes the quantity θ<sub>RMST</sub>. 
   - **Censoring probabilities**.
 - Configure model characteristics.
 
-An example of how to use this function is provided in the `/examples/code_example`.
-
 ## Key Insights
 
 1. **Unbiased Estimation**:  
@@ -58,10 +56,6 @@ An example of how to use this function is provided in the `/examples/code_exampl
 
 2. **Predicting Survival Curves**:  
    Knowing the treatment effect enables the prediction of survival curves for individuals under specific treatments. The figures illustrate how treatment can either increase or decrease individuals' survival times.
-
-## Example Usage
-
-Refer to the `./examples/example` directory for a complete example of how to use the `calculate_causal_effect` function.
 
 ## Visualizations
 
