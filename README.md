@@ -1,4 +1,4 @@
-# Non-Parametric Estimator Modification for Survival Analysis
+# Non-Parametric Estimator Modification for Causal Survival Analysis
 
 This repository contains a modification of a classical non-parametric estimator in survival analysis: the Kaplan-Meier estimator. Two causal adaptations of this estimator are implemented, inspired by the article: [[Causal survival analysis
 Estimation of the Average Treatment Effect (ATE): Practical Recommendations](https://arxiv.org/pdf/2501.05836)].
