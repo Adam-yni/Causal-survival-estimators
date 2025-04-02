@@ -27,6 +27,50 @@ To determine which estimator is most suitable for your use case, refer to the ta
 | Treatment dependent on covariates                | ❌                           | ❌                                       | ✅                                       | ✅                                                       |
 | Treatment and Censoring dependent on covariates  | ❌                           | ❌                                        | ❌                                       | ✅                                                       |
 
+# Estimation of Average Treatment Effect on Survival Time
 
-![Example](KM_causal_survival.png)
+This code estimates the **Average Treatment Effect on Survival Time** :
+
+**Causal Effect: Difference between Restricted Mean Survival Time (RMST)**  
+θ<sub>RMST</sub> = E[T(1) ∧ τ − T(0) ∧ τ],  
+where `a ∧ b := min(a, b)` for `a, b ∈ R`.
+
+The expectation is defined as:  
+E[T(a) ∧ τ] = ∫<sub>0</sub><sup>∞</sup> P(T(a) ∧ τ > t) dt = ∫<sub>0</sub><sup>τ</sup> S<sub>a</sub>(t) dt,  
+where `a` is the applied treatment.
+
+## Functionality
+
+The `calculate_causal_effect` function computes the quantity θ<sub>RMST</sub>. It allows users to:
+
+- Select covariates to include in the model.
+- Choose the type of model to predict:
+  - **Propensity scores**.
+  - **Censoring probabilities**.
+- Configure model characteristics.
+
+An example of how to use this function is provided in the `/examples/code_example`.
+
+## Key Insights
+
+1. **Unbiased Estimation**:  
+   The `IPTW_IPCW` estimator is unbiased for estimating the average treatment effect, unlike the naive estimation. This is demonstrated in the provided graph.
+
+2. **Predicting Survival Curves**:  
+   Knowing the treatment effect enables the prediction of survival curves for individuals under specific treatments. The figures illustrate how treatment can either increase or decrease individuals' survival times.
+
+## Example Usage
+
+Refer to the `./examples/example` directory for a complete example of how to use the `calculate_causal_effect` function.
+
+## Visualizations
+
+- **Comparison of Estimators**: A graph showing the unbiased nature of the `IPTW_IPCW` estimator compared to naive estimation.
+  ![Example](./images/figure_causal_KM_convergence.png)
+
+- **Survival Curves**: Figures demonstrating the predicted survival curves under different treatment scenarios.
+  ![Example](./images/negative_treatment_effect.png)
+  ![Example](./images/positive_treatment_effect.png)
+
+
 
